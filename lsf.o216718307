@@ -1,0 +1,853 @@
+Sender: LSF System <lsfadmin@eu-g3-029>
+Subject: Job 216718307: <python train.py> in cluster <euler> Done
+
+Job <python train.py> was submitted from host <eu-login-16> by user <jiahzhang> in cluster <euler> at Sun May  1 10:38:43 2022
+Job was executed on host(s) <eu-g3-029>, in queue <gpu.4h>, as user <jiahzhang> in cluster <euler> at Sun May  1 10:38:49 2022
+</cluster/home/jiahzhang> was used as the home directory.
+</cluster/home/jiahzhang/PMLR10> was used as the working directory.
+Started at Sun May  1 10:38:49 2022
+Terminated at Sun May  1 11:26:41 2022
+Results reported at Sun May  1 11:26:41 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python train.py
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   2844.32 sec.
+    Max Memory :                                 5000 MB
+    Average Memory :                             3827.11 MB
+    Total Requested Memory :                     5000.00 MB
+    Delta Memory :                               0.00 MB
+    Max Swap :                                   -
+    Max Processes :                              3
+    Max Threads :                                8
+    Run time :                                   2884 sec.
+    Turnaround time :                            2878 sec.
+
+The output (if any) follows:
+
+Files already downloaded and verified
+Files already downloaded and verified
+cuda:0
+---network architecture---
+Sequential(
+  (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (2): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+  (3): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (4): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (5): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+  (6): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (7): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (8): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+  (9): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (10): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+)
+--------------------------
+[1,   200] loss: 2.261
+[1,   400] loss: 1.990
+[1,   600] loss: 1.796
+[1,   800] loss: 1.728
+[1,  1000] loss: 1.661
+[1,  1200] loss: 1.603
+[1,  1400] loss: 1.546
+Accuracy of the network on the 10000 test images: 45 %
+[2,   200] loss: 1.424
+[2,   400] loss: 1.397
+[2,   600] loss: 1.375
+[2,   800] loss: 1.349
+[2,  1000] loss: 1.308
+[2,  1200] loss: 1.279
+[2,  1400] loss: 1.261
+Accuracy of the network on the 10000 test images: 55 %
+[3,   200] loss: 1.140
+[3,   400] loss: 1.172
+[3,   600] loss: 1.128
+[3,   800] loss: 1.143
+[3,  1000] loss: 1.133
+[3,  1200] loss: 1.093
+[3,  1400] loss: 1.057
+Accuracy of the network on the 10000 test images: 61 %
+[4,   200] loss: 0.988
+[4,   400] loss: 0.970
+[4,   600] loss: 0.964
+[4,   800] loss: 0.996
+[4,  1000] loss: 0.974
+[4,  1200] loss: 0.952
+[4,  1400] loss: 0.973
+Accuracy of the network on the 10000 test images: 65 %
+[5,   200] loss: 0.843
+[5,   400] loss: 0.852
+[5,   600] loss: 0.867
+[5,   800] loss: 0.834
+[5,  1000] loss: 0.858
+[5,  1200] loss: 0.863
+[5,  1400] loss: 0.861
+Accuracy of the network on the 10000 test images: 67 %
+[6,   200] loss: 0.710
+[6,   400] loss: 0.773
+[6,   600] loss: 0.793
+[6,   800] loss: 0.780
+[6,  1000] loss: 0.798
+[6,  1200] loss: 0.784
+[6,  1400] loss: 0.794
+Accuracy of the network on the 10000 test images: 67 %
+[7,   200] loss: 0.638
+[7,   400] loss: 0.690
+[7,   600] loss: 0.690
+[7,   800] loss: 0.716
+[7,  1000] loss: 0.741
+[7,  1200] loss: 0.725
+[7,  1400] loss: 0.703
+Accuracy of the network on the 10000 test images: 67 %
+[8,   200] loss: 0.605
+[8,   400] loss: 0.621
+[8,   600] loss: 0.634
+[8,   800] loss: 0.646
+[8,  1000] loss: 0.655
+[8,  1200] loss: 0.681
+[8,  1400] loss: 0.669
+Accuracy of the network on the 10000 test images: 69 %
+[9,   200] loss: 0.525
+[9,   400] loss: 0.564
+[9,   600] loss: 0.564
+[9,   800] loss: 0.602
+[9,  1000] loss: 0.612
+[9,  1200] loss: 0.637
+[9,  1400] loss: 0.623
+Accuracy of the network on the 10000 test images: 69 %
+[10,   200] loss: 0.479
+[10,   400] loss: 0.536
+[10,   600] loss: 0.556
+[10,   800] loss: 0.542
+[10,  1000] loss: 0.565
+[10,  1200] loss: 0.565
+[10,  1400] loss: 0.570
+Accuracy of the network on the 10000 test images: 68 %
+[11,   200] loss: 0.433
+[11,   400] loss: 0.478
+[11,   600] loss: 0.498
+[11,   800] loss: 0.523
+[11,  1000] loss: 0.536
+[11,  1200] loss: 0.559
+[11,  1400] loss: 0.554
+Accuracy of the network on the 10000 test images: 69 %
+[12,   200] loss: 0.421
+[12,   400] loss: 0.432
+[12,   600] loss: 0.503
+[12,   800] loss: 0.515
+[12,  1000] loss: 0.529
+[12,  1200] loss: 0.515
+[12,  1400] loss: 0.538
+Accuracy of the network on the 10000 test images: 67 %
+[13,   200] loss: 0.391
+[13,   400] loss: 0.428
+[13,   600] loss: 0.454
+[13,   800] loss: 0.462
+[13,  1000] loss: 0.520
+[13,  1200] loss: 0.502
+[13,  1400] loss: 0.501
+Accuracy of the network on the 10000 test images: 69 %
+[14,   200] loss: 0.350
+[14,   400] loss: 0.407
+[14,   600] loss: 0.404
+[14,   800] loss: 0.435
+[14,  1000] loss: 0.468
+[14,  1200] loss: 0.518
+[14,  1400] loss: 0.494
+Accuracy of the network on the 10000 test images: 69 %
+[15,   200] loss: 0.332
+[15,   400] loss: 0.411
+[15,   600] loss: 0.417
+[15,   800] loss: 0.445
+[15,  1000] loss: 0.490
+[15,  1200] loss: 0.458
+[15,  1400] loss: 0.476
+Accuracy of the network on the 10000 test images: 68 %
+[16,   200] loss: 0.344
+[16,   400] loss: 0.388
+[16,   600] loss: 0.427
+[16,   800] loss: 0.426
+[16,  1000] loss: 0.432
+[16,  1200] loss: 0.464
+[16,  1400] loss: 0.483
+Accuracy of the network on the 10000 test images: 68 %
+[17,   200] loss: 0.340
+[17,   400] loss: 0.369
+[17,   600] loss: 0.384
+[17,   800] loss: 0.417
+[17,  1000] loss: 0.448
+[17,  1200] loss: 0.447
+[17,  1400] loss: 0.486
+Accuracy of the network on the 10000 test images: 68 %
+[18,   200] loss: 0.354
+[18,   400] loss: 0.347
+[18,   600] loss: 0.402
+[18,   800] loss: 0.389
+[18,  1000] loss: 0.415
+[18,  1200] loss: 0.430
+[18,  1400] loss: 0.501
+Accuracy of the network on the 10000 test images: 68 %
+[19,   200] loss: 0.306
+[19,   400] loss: 0.370
+[19,   600] loss: 0.357
+[19,   800] loss: 0.430
+[19,  1000] loss: 0.446
+[19,  1200] loss: 0.495
+[19,  1400] loss: 0.432
+Accuracy of the network on the 10000 test images: 69 %
+[20,   200] loss: 0.297
+[20,   400] loss: 0.334
+[20,   600] loss: 0.403
+[20,   800] loss: 0.402
+[20,  1000] loss: 0.443
+[20,  1200] loss: 0.454
+[20,  1400] loss: 0.460
+Accuracy of the network on the 10000 test images: 69 %
+[21,   200] loss: 0.283
+[21,   400] loss: 0.326
+[21,   600] loss: 0.406
+[21,   800] loss: 0.407
+[21,  1000] loss: 0.422
+[21,  1200] loss: 0.435
+[21,  1400] loss: 0.446
+Accuracy of the network on the 10000 test images: 69 %
+[22,   200] loss: 0.324
+[22,   400] loss: 0.356
+[22,   600] loss: 0.378
+[22,   800] loss: 0.387
+[22,  1000] loss: 0.415
+[22,  1200] loss: 0.453
+[22,  1400] loss: 0.418
+Accuracy of the network on the 10000 test images: 68 %
+[23,   200] loss: 0.313
+[23,   400] loss: 0.329
+[23,   600] loss: 0.355
+[23,   800] loss: 0.397
+[23,  1000] loss: 0.424
+[23,  1200] loss: 0.414
+[23,  1400] loss: 0.427
+Accuracy of the network on the 10000 test images: 66 %
+[24,   200] loss: 0.298
+[24,   400] loss: 0.338
+[24,   600] loss: 0.343
+[24,   800] loss: 0.372
+[24,  1000] loss: 0.385
+[24,  1200] loss: 0.406
+[24,  1400] loss: 0.445
+Accuracy of the network on the 10000 test images: 68 %
+[25,   200] loss: 0.346
+[25,   400] loss: 0.341
+[25,   600] loss: 0.396
+[25,   800] loss: 0.433
+[25,  1000] loss: 0.433
+[25,  1200] loss: 0.419
+[25,  1400] loss: 0.416
+Accuracy of the network on the 10000 test images: 67 %
+[26,   200] loss: 0.323
+[26,   400] loss: 0.340
+[26,   600] loss: 0.323
+[26,   800] loss: 0.359
+[26,  1000] loss: 0.392
+[26,  1200] loss: 0.402
+[26,  1400] loss: 0.422
+Accuracy of the network on the 10000 test images: 67 %
+[27,   200] loss: 0.312
+[27,   400] loss: 0.318
+[27,   600] loss: 0.361
+[27,   800] loss: 0.393
+[27,  1000] loss: 0.379
+[27,  1200] loss: 0.404
+[27,  1400] loss: 0.445
+Accuracy of the network on the 10000 test images: 68 %
+[28,   200] loss: 0.283
+[28,   400] loss: 0.316
+[28,   600] loss: 0.360
+[28,   800] loss: 0.374
+[28,  1000] loss: 0.429
+[28,  1200] loss: 0.400
+[28,  1400] loss: 0.402
+Accuracy of the network on the 10000 test images: 68 %
+[29,   200] loss: 0.301
+[29,   400] loss: 0.323
+[29,   600] loss: 0.335
+[29,   800] loss: 0.365
+[29,  1000] loss: 0.374
+[29,  1200] loss: 0.421
+[29,  1400] loss: 0.372
+Accuracy of the network on the 10000 test images: 67 %
+[30,   200] loss: 0.318
+[30,   400] loss: 0.341
+[30,   600] loss: 0.340
+[30,   800] loss: 0.357
+[30,  1000] loss: 0.389
+[30,  1200] loss: 0.385
+[30,  1400] loss: 0.401
+Accuracy of the network on the 10000 test images: 66 %
+[31,   200] loss: 0.296
+[31,   400] loss: 0.300
+[31,   600] loss: 0.332
+[31,   800] loss: 0.332
+[31,  1000] loss: 0.379
+[31,  1200] loss: 0.464
+[31,  1400] loss: 0.458
+Accuracy of the network on the 10000 test images: 67 %
+[32,   200] loss: 0.288
+[32,   400] loss: 0.288
+[32,   600] loss: 0.296
+[32,   800] loss: 0.382
+[32,  1000] loss: 0.394
+[32,  1200] loss: 0.399
+[32,  1400] loss: 0.453
+Accuracy of the network on the 10000 test images: 68 %
+[33,   200] loss: 0.296
+[33,   400] loss: 0.296
+[33,   600] loss: 0.346
+[33,   800] loss: 0.430
+[33,  1000] loss: 0.391
+[33,  1200] loss: 0.423
+[33,  1400] loss: 0.420
+Accuracy of the network on the 10000 test images: 67 %
+[34,   200] loss: 0.266
+[34,   400] loss: 0.296
+[34,   600] loss: 0.324
+[34,   800] loss: 0.341
+[34,  1000] loss: 0.389
+[34,  1200] loss: 0.357
+[34,  1400] loss: 0.415
+Accuracy of the network on the 10000 test images: 68 %
+[35,   200] loss: 0.282
+[35,   400] loss: 0.260
+[35,   600] loss: 0.338
+[35,   800] loss: 0.303
+[35,  1000] loss: 0.344
+[35,  1200] loss: 0.371
+[35,  1400] loss: 0.373
+Accuracy of the network on the 10000 test images: 66 %
+[36,   200] loss: 0.271
+[36,   400] loss: 0.307
+[36,   600] loss: 0.296
+[36,   800] loss: 0.366
+[36,  1000] loss: 0.356
+[36,  1200] loss: 0.406
+[36,  1400] loss: 0.449
+Accuracy of the network on the 10000 test images: 68 %
+[37,   200] loss: 0.279
+[37,   400] loss: 0.304
+[37,   600] loss: 0.322
+[37,   800] loss: 0.393
+[37,  1000] loss: 0.354
+[37,  1200] loss: 0.343
+[37,  1400] loss: 0.463
+Accuracy of the network on the 10000 test images: 68 %
+[38,   200] loss: 0.285
+[38,   400] loss: 0.317
+[38,   600] loss: 0.334
+[38,   800] loss: 0.323
+[38,  1000] loss: 0.326
+[38,  1200] loss: 0.382
+[38,  1400] loss: 0.392
+Accuracy of the network on the 10000 test images: 67 %
+[39,   200] loss: 0.272
+[39,   400] loss: 0.259
+[39,   600] loss: 0.277
+[39,   800] loss: 0.328
+[39,  1000] loss: 0.395
+[39,  1200] loss: 0.398
+[39,  1400] loss: 0.381
+Accuracy of the network on the 10000 test images: 67 %
+[40,   200] loss: 0.247
+[40,   400] loss: 0.261
+[40,   600] loss: 0.327
+[40,   800] loss: 0.393
+[40,  1000] loss: 0.314
+[40,  1200] loss: 0.379
+[40,  1400] loss: 0.416
+Accuracy of the network on the 10000 test images: 68 %
+[41,   200] loss: 0.268
+[41,   400] loss: 0.273
+[41,   600] loss: 0.304
+[41,   800] loss: 0.291
+[41,  1000] loss: 0.352
+[41,  1200] loss: 0.391
+[41,  1400] loss: 0.366
+Accuracy of the network on the 10000 test images: 67 %
+[42,   200] loss: 0.247
+[42,   400] loss: 0.263
+[42,   600] loss: 0.357
+[42,   800] loss: 0.312
+[42,  1000] loss: 0.348
+[42,  1200] loss: 0.417
+[42,  1400] loss: 0.360
+Accuracy of the network on the 10000 test images: 67 %
+[43,   200] loss: 0.242
+[43,   400] loss: 0.293
+[43,   600] loss: 0.285
+[43,   800] loss: 0.336
+[43,  1000] loss: 0.382
+[43,  1200] loss: 0.341
+[43,  1400] loss: 0.329
+Accuracy of the network on the 10000 test images: 66 %
+[44,   200] loss: 0.238
+[44,   400] loss: 0.271
+[44,   600] loss: 0.341
+[44,   800] loss: 0.318
+[44,  1000] loss: 0.339
+[44,  1200] loss: 0.328
+[44,  1400] loss: 0.388
+Accuracy of the network on the 10000 test images: 67 %
+[45,   200] loss: 0.286
+[45,   400] loss: 0.266
+[45,   600] loss: 0.263
+[45,   800] loss: 0.292
+[45,  1000] loss: 0.280
+[45,  1200] loss: 0.360
+[45,  1400] loss: 0.379
+Accuracy of the network on the 10000 test images: 67 %
+[46,   200] loss: 0.258
+[46,   400] loss: 0.288
+[46,   600] loss: 0.290
+[46,   800] loss: 0.387
+[46,  1000] loss: 0.350
+[46,  1200] loss: 0.395
+[46,  1400] loss: 0.350
+Accuracy of the network on the 10000 test images: 66 %
+[47,   200] loss: 0.259
+[47,   400] loss: 0.285
+[47,   600] loss: 0.266
+[47,   800] loss: 0.299
+[47,  1000] loss: 0.309
+[47,  1200] loss: 0.344
+[47,  1400] loss: 0.314
+Accuracy of the network on the 10000 test images: 67 %
+[48,   200] loss: 0.283
+[48,   400] loss: 0.259
+[48,   600] loss: 0.290
+[48,   800] loss: 0.319
+[48,  1000] loss: 0.312
+[48,  1200] loss: 0.313
+[48,  1400] loss: 0.353
+Accuracy of the network on the 10000 test images: 66 %
+[49,   200] loss: 0.213
+[49,   400] loss: 0.267
+[49,   600] loss: 0.245
+[49,   800] loss: 0.298
+[49,  1000] loss: 0.338
+[49,  1200] loss: 0.317
+[49,  1400] loss: 0.339
+Accuracy of the network on the 10000 test images: 67 %
+[50,   200] loss: 0.248
+[50,   400] loss: 0.242
+[50,   600] loss: 0.289
+[50,   800] loss: 0.300
+[50,  1000] loss: 0.356
+[50,  1200] loss: 0.346
+[50,  1400] loss: 0.355
+Accuracy of the network on the 10000 test images: 66 %
+[51,   200] loss: 0.279
+[51,   400] loss: 0.275
+[51,   600] loss: 0.272
+[51,   800] loss: 0.276
+[51,  1000] loss: 0.318
+[51,  1200] loss: 0.390
+[51,  1400] loss: 0.373
+Accuracy of the network on the 10000 test images: 67 %
+[52,   200] loss: 0.231
+[52,   400] loss: 0.253
+[52,   600] loss: 0.257
+[52,   800] loss: 0.289
+[52,  1000] loss: 0.348
+[52,  1200] loss: 0.350
+[52,  1400] loss: 0.347
+Accuracy of the network on the 10000 test images: 66 %
+[53,   200] loss: 0.242
+[53,   400] loss: 0.261
+[53,   600] loss: 0.320
+[53,   800] loss: 0.311
+[53,  1000] loss: 0.295
+[53,  1200] loss: 0.306
+[53,  1400] loss: 0.348
+Accuracy of the network on the 10000 test images: 64 %
+[54,   200] loss: 0.270
+[54,   400] loss: 0.232
+[54,   600] loss: 0.281
+[54,   800] loss: 0.309
+[54,  1000] loss: 0.282
+[54,  1200] loss: 0.270
+[54,  1400] loss: 0.320
+Accuracy of the network on the 10000 test images: 66 %
+[55,   200] loss: 0.254
+[55,   400] loss: 0.242
+[55,   600] loss: 0.290
+[55,   800] loss: 0.261
+[55,  1000] loss: 0.296
+[55,  1200] loss: 0.335
+[55,  1400] loss: 0.308
+Accuracy of the network on the 10000 test images: 66 %
+[56,   200] loss: 0.241
+[56,   400] loss: 0.272
+[56,   600] loss: 0.274
+[56,   800] loss: 0.311
+[56,  1000] loss: 0.418
+[56,  1200] loss: 0.318
+[56,  1400] loss: 0.384
+Accuracy of the network on the 10000 test images: 66 %
+[57,   200] loss: 0.222
+[57,   400] loss: 0.267
+[57,   600] loss: 0.294
+[57,   800] loss: 0.305
+[57,  1000] loss: 0.320
+[57,  1200] loss: 0.293
+[57,  1400] loss: 0.308
+Accuracy of the network on the 10000 test images: 67 %
+[58,   200] loss: 0.215
+[58,   400] loss: 0.227
+[58,   600] loss: 0.314
+[58,   800] loss: 0.280
+[58,  1000] loss: 0.318
+[58,  1200] loss: 0.317
+[58,  1400] loss: 0.321
+Accuracy of the network on the 10000 test images: 66 %
+[59,   200] loss: 0.227
+[59,   400] loss: 0.263
+[59,   600] loss: 0.280
+[59,   800] loss: 0.294
+[59,  1000] loss: 0.256
+[59,  1200] loss: 0.260
+[59,  1400] loss: 0.297
+Accuracy of the network on the 10000 test images: 67 %
+[60,   200] loss: 0.244
+[60,   400] loss: 0.256
+[60,   600] loss: 0.285
+[60,   800] loss: 0.240
+[60,  1000] loss: 0.295
+[60,  1200] loss: 0.284
+[60,  1400] loss: 0.277
+Accuracy of the network on the 10000 test images: 66 %
+[61,   200] loss: 0.204
+[61,   400] loss: 0.269
+[61,   600] loss: 0.300
+[61,   800] loss: 0.348
+[61,  1000] loss: 0.312
+[61,  1200] loss: 0.322
+[61,  1400] loss: 0.330
+Accuracy of the network on the 10000 test images: 65 %
+[62,   200] loss: 0.343
+[62,   400] loss: 0.264
+[62,   600] loss: 0.268
+[62,   800] loss: 0.267
+[62,  1000] loss: 0.329
+[62,  1200] loss: 0.329
+[62,  1400] loss: 0.349
+Accuracy of the network on the 10000 test images: 66 %
+[63,   200] loss: 0.199
+[63,   400] loss: 0.210
+[63,   600] loss: 0.256
+[63,   800] loss: 0.248
+[63,  1000] loss: 0.305
+[63,  1200] loss: 0.283
+[63,  1400] loss: 0.316
+Accuracy of the network on the 10000 test images: 67 %
+[64,   200] loss: 0.241
+[64,   400] loss: 0.224
+[64,   600] loss: 0.245
+[64,   800] loss: 0.270
+[64,  1000] loss: 0.287
+[64,  1200] loss: 0.273
+[64,  1400] loss: 0.308
+Accuracy of the network on the 10000 test images: 66 %
+[65,   200] loss: 0.229
+[65,   400] loss: 0.225
+[65,   600] loss: 0.254
+[65,   800] loss: 0.262
+[65,  1000] loss: 0.312
+[65,  1200] loss: 0.329
+[65,  1400] loss: 0.356
+Accuracy of the network on the 10000 test images: 66 %
+[66,   200] loss: 0.246
+[66,   400] loss: 0.232
+[66,   600] loss: 0.250
+[66,   800] loss: 0.241
+[66,  1000] loss: 0.303
+[66,  1200] loss: 0.250
+[66,  1400] loss: 0.293
+Accuracy of the network on the 10000 test images: 65 %
+[67,   200] loss: 0.207
+[67,   400] loss: 0.212
+[67,   600] loss: 0.212
+[67,   800] loss: 0.237
+[67,  1000] loss: 0.281
+[67,  1200] loss: 0.286
+[67,  1400] loss: 0.295
+Accuracy of the network on the 10000 test images: 66 %
+[68,   200] loss: 0.215
+[68,   400] loss: 0.205
+[68,   600] loss: 0.242
+[68,   800] loss: 0.301
+[68,  1000] loss: 0.305
+[68,  1200] loss: 0.291
+[68,  1400] loss: 0.290
+Accuracy of the network on the 10000 test images: 65 %
+[69,   200] loss: 0.254
+[69,   400] loss: 0.211
+[69,   600] loss: 0.288
+[69,   800] loss: 0.258
+[69,  1000] loss: 0.321
+[69,  1200] loss: 0.312
+[69,  1400] loss: 0.298
+Accuracy of the network on the 10000 test images: 66 %
+[70,   200] loss: 0.195
+[70,   400] loss: 0.223
+[70,   600] loss: 0.291
+[70,   800] loss: 0.265
+[70,  1000] loss: 0.287
+[70,  1200] loss: 0.299
+[70,  1400] loss: 0.274
+Accuracy of the network on the 10000 test images: 67 %
+[71,   200] loss: 0.224
+[71,   400] loss: 0.282
+[71,   600] loss: 0.249
+[71,   800] loss: 0.257
+[71,  1000] loss: 0.283
+[71,  1200] loss: 0.326
+[71,  1400] loss: 0.271
+Accuracy of the network on the 10000 test images: 66 %
+[72,   200] loss: 0.237
+[72,   400] loss: 0.233
+[72,   600] loss: 0.268
+[72,   800] loss: 0.239
+[72,  1000] loss: 0.245
+[72,  1200] loss: 0.260
+[72,  1400] loss: 0.235
+Accuracy of the network on the 10000 test images: 67 %
+[73,   200] loss: 0.208
+[73,   400] loss: 0.241
+[73,   600] loss: 0.227
+[73,   800] loss: 0.300
+[73,  1000] loss: 0.302
+[73,  1200] loss: 0.274
+[73,  1400] loss: 0.272
+Accuracy of the network on the 10000 test images: 66 %
+[74,   200] loss: 0.243
+[74,   400] loss: 0.233
+[74,   600] loss: 0.246
+[74,   800] loss: 0.280
+[74,  1000] loss: 0.317
+[74,  1200] loss: 0.291
+[74,  1400] loss: 0.324
+Accuracy of the network on the 10000 test images: 66 %
+[75,   200] loss: 0.180
+[75,   400] loss: 0.213
+[75,   600] loss: 0.241
+[75,   800] loss: 0.274
+[75,  1000] loss: 0.251
+[75,  1200] loss: 0.276
+[75,  1400] loss: 0.305
+Accuracy of the network on the 10000 test images: 66 %
+[76,   200] loss: 0.175
+[76,   400] loss: 0.182
+[76,   600] loss: 0.186
+[76,   800] loss: 0.192
+[76,  1000] loss: 0.287
+[76,  1200] loss: 0.313
+[76,  1400] loss: 0.294
+Accuracy of the network on the 10000 test images: 66 %
+[77,   200] loss: 0.197
+[77,   400] loss: 0.194
+[77,   600] loss: 0.190
+[77,   800] loss: 0.254
+[77,  1000] loss: 0.270
+[77,  1200] loss: 0.258
+[77,  1400] loss: 0.277
+Accuracy of the network on the 10000 test images: 65 %
+[78,   200] loss: 0.243
+[78,   400] loss: 0.210
+[78,   600] loss: 0.213
+[78,   800] loss: 0.238
+[78,  1000] loss: 0.223
+[78,  1200] loss: 0.231
+[78,  1400] loss: 0.328
+Accuracy of the network on the 10000 test images: 65 %
+[79,   200] loss: 0.249
+[79,   400] loss: 0.206
+[79,   600] loss: 0.236
+[79,   800] loss: 0.258
+[79,  1000] loss: 0.285
+[79,  1200] loss: 0.299
+[79,  1400] loss: 0.275
+Accuracy of the network on the 10000 test images: 66 %
+[80,   200] loss: 0.175
+[80,   400] loss: 0.202
+[80,   600] loss: 0.233
+[80,   800] loss: 0.222
+[80,  1000] loss: 0.199
+[80,  1200] loss: 0.307
+[80,  1400] loss: 0.295
+Accuracy of the network on the 10000 test images: 66 %
+[81,   200] loss: 0.201
+[81,   400] loss: 0.205
+[81,   600] loss: 0.254
+[81,   800] loss: 0.231
+[81,  1000] loss: 0.231
+[81,  1200] loss: 0.246
+[81,  1400] loss: 0.284
+Accuracy of the network on the 10000 test images: 66 %
+[82,   200] loss: 0.182
+[82,   400] loss: 0.216
+[82,   600] loss: 0.220
+[82,   800] loss: 0.261
+[82,  1000] loss: 0.227
+[82,  1200] loss: 0.236
+[82,  1400] loss: 0.274
+Accuracy of the network on the 10000 test images: 66 %
+[83,   200] loss: 0.185
+[83,   400] loss: 0.206
+[83,   600] loss: 0.215
+[83,   800] loss: 0.297
+[83,  1000] loss: 0.279
+[83,  1200] loss: 0.262
+[83,  1400] loss: 0.318
+Accuracy of the network on the 10000 test images: 65 %
+[84,   200] loss: 0.171
+[84,   400] loss: 0.160
+[84,   600] loss: 0.204
+[84,   800] loss: 0.257
+[84,  1000] loss: 0.251
+[84,  1200] loss: 0.261
+[84,  1400] loss: 0.354
+Accuracy of the network on the 10000 test images: 65 %
+[85,   200] loss: 0.191
+[85,   400] loss: 0.179
+[85,   600] loss: 0.211
+[85,   800] loss: 0.216
+[85,  1000] loss: 0.232
+[85,  1200] loss: 0.250
+[85,  1400] loss: 0.239
+Accuracy of the network on the 10000 test images: 66 %
+[86,   200] loss: 0.194
+[86,   400] loss: 0.145
+[86,   600] loss: 0.243
+[86,   800] loss: 0.252
+[86,  1000] loss: 0.247
+[86,  1200] loss: 0.234
+[86,  1400] loss: 0.266
+Accuracy of the network on the 10000 test images: 66 %
+[87,   200] loss: 0.173
+[87,   400] loss: 0.209
+[87,   600] loss: 0.235
+[87,   800] loss: 0.218
+[87,  1000] loss: 0.199
+[87,  1200] loss: 0.238
+[87,  1400] loss: 0.198
+Accuracy of the network on the 10000 test images: 65 %
+[88,   200] loss: 0.208
+[88,   400] loss: 0.211
+[88,   600] loss: 0.183
+[88,   800] loss: 0.215
+[88,  1000] loss: 0.254
+[88,  1200] loss: 0.240
+[88,  1400] loss: 0.271
+Accuracy of the network on the 10000 test images: 66 %
+[89,   200] loss: 0.181
+[89,   400] loss: 0.203
+[89,   600] loss: 0.226
+[89,   800] loss: 0.227
+[89,  1000] loss: 0.232
+[89,  1200] loss: 0.267
+[89,  1400] loss: 0.278
+Accuracy of the network on the 10000 test images: 64 %
+[90,   200] loss: 0.158
+[90,   400] loss: 0.125
+[90,   600] loss: 0.193
+[90,   800] loss: 0.195
+[90,  1000] loss: 0.232
+[90,  1200] loss: 0.231
+[90,  1400] loss: 0.243
+Accuracy of the network on the 10000 test images: 66 %
+[91,   200] loss: 0.161
+[91,   400] loss: 0.193
+[91,   600] loss: 0.234
+[91,   800] loss: 0.255
+[91,  1000] loss: 0.198
+[91,  1200] loss: 0.214
+[91,  1400] loss: 0.239
+Accuracy of the network on the 10000 test images: 65 %
+[92,   200] loss: 0.179
+[92,   400] loss: 0.209
+[92,   600] loss: 0.266
+[92,   800] loss: 0.224
+[92,  1000] loss: 0.262
+[92,  1200] loss: 0.286
+[92,  1400] loss: 0.272
+Accuracy of the network on the 10000 test images: 65 %
+[93,   200] loss: 0.197
+[93,   400] loss: 0.195
+[93,   600] loss: 0.183
+[93,   800] loss: 0.203
+[93,  1000] loss: 0.207
+[93,  1200] loss: 0.237
+[93,  1400] loss: 0.251
+Accuracy of the network on the 10000 test images: 64 %
+[94,   200] loss: 0.190
+[94,   400] loss: 0.220
+[94,   600] loss: 0.191
+[94,   800] loss: 0.222
+[94,  1000] loss: 0.236
+[94,  1200] loss: 0.269
+[94,  1400] loss: 0.223
+Accuracy of the network on the 10000 test images: 66 %
+[95,   200] loss: 0.215
+[95,   400] loss: 0.209
+[95,   600] loss: 0.228
+[95,   800] loss: 0.211
+[95,  1000] loss: 0.238
+[95,  1200] loss: 0.207
+[95,  1400] loss: 0.248
+Accuracy of the network on the 10000 test images: 65 %
+[96,   200] loss: 0.180
+[96,   400] loss: 0.181
+[96,   600] loss: 0.216
+[96,   800] loss: 0.187
+[96,  1000] loss: 0.222
+[96,  1200] loss: 0.226
+[96,  1400] loss: 0.248
+Accuracy of the network on the 10000 test images: 66 %
+[97,   200] loss: 0.173
+[97,   400] loss: 0.150
+[97,   600] loss: 0.222
+[97,   800] loss: 0.217
+[97,  1000] loss: 0.222
+[97,  1200] loss: 0.263
+[97,  1400] loss: 0.223
+Accuracy of the network on the 10000 test images: 65 %
+[98,   200] loss: 0.137
+[98,   400] loss: 0.226
+[98,   600] loss: 0.188
+[98,   800] loss: 0.177
+[98,  1000] loss: 0.217
+[98,  1200] loss: 0.281
+[98,  1400] loss: 0.255
+Accuracy of the network on the 10000 test images: 65 %
+[99,   200] loss: 0.176
+[99,   400] loss: 0.208
+[99,   600] loss: 0.251
+[99,   800] loss: 0.239
+[99,  1000] loss: 0.232
+[99,  1200] loss: 0.223
+[99,  1400] loss: 0.227
+Accuracy of the network on the 10000 test images: 66 %
+[100,   200] loss: 0.201
+[100,   400] loss: 0.200
+[100,   600] loss: 0.165
+[100,   800] loss: 0.204
+[100,  1000] loss: 0.219
+[100,  1200] loss: 0.262
+[100,  1400] loss: 0.222
+Accuracy of the network on the 10000 test images: 66 %

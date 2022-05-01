@@ -14,7 +14,7 @@ class ConvNet(nn.Module):
         # here we have to assume for all layers, padding = 1, otherwise not trainable
         self.conv_layers = [
             torch.nn.Conv2d(in_channel, layer_sizes[0], kernel_size=3, stride=strides[0], # specified in the appendix
-            padding=1, dilation=1, groups=1, bias=True, padding_mode='zeros', device=None, dtype=None), # not specififed params here
+            padding=1, dilation=1, groups=1, bias=True), # not specififed params here
         ]
         for i in range(1, len(layer_sizes)):
             self.conv_layers.append(
