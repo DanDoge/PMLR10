@@ -33,9 +33,9 @@ class ConvNet(nn.Module):
         print("--------------------------")
 
     def init_mus(self, device):
-        self.mus = [torch.zeros((self.num_classes, self.layer_sizes[0]))]  # num_classes * layer_size
+        self.mus = [torch.zeros((self.num_classes, self.layer_sizes[0])).to(device)]  # num_classes * layer_size
         for i in range(1, len(self.layer_sizes)):
-            self.mus.append((torch.zeros((self.num_classes, self.layer_sizes[i]))))
+            self.mus.append(torch.zeros((self.num_classes, self.layer_sizes[i])).to(device))
 
     def forward_and_record(self, x, labels,device):
         for layer, mu in zip(self.conv_layers, self.mus):
