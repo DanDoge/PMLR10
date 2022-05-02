@@ -79,7 +79,7 @@ for i, sel in enumerate(selectivity):
             for data in testloader:
                 images, labels = data[0].to(device), data[1].to(device)
                 # calculate outputs by running images through the network
-                outputs = net.clamp_forward(images, i, j)  # use clamp_forward instead of forward
+                outputs = net.clamp_forward(images, i, j, device)  # use clamp_forward instead of forward
                 loss = criterion(outputs, labels)
                 now_loss += loss.item()
 

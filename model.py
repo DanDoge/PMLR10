@@ -37,11 +37,11 @@ class ConvNet(nn.Module):
         for i in range(1, len(self.layer_sizes)):
             self.mus.append((torch.zeros((self.num_classes, self.layer_sizes[i]))))
 
-    def forward_and_record(self, x, labels):
+    def forward_and_record(self, x, labels,device):
         for layer, mu in zip(self.conv_layers, self.mus):
             x = layer(x)
             x = self.activ(x)  # bs * layer_size * d * d
-            avg_x = torch.mean(x, (2, 3))  # bs * layer_size, activity of feature map is averaged across all elemnts
+            avg_x = torch.mean(x, (2, 3)).to(device)  # bs * layer_size, activity of feature map is averaged across all elemnts
             for i, single in enumerate(avg_x):
                 mu[labels[i]] += single
 
@@ -56,7 +56,7 @@ class ConvNet(nn.Module):
             for data in testloader:
                 images, labels = data[0].to(device), data[1].to(device)
                 num_images += images.shape[0]
-                _ = self.forward_and_record(images, labels)
+                _ = self.forward_and_record(images, labels, device)
         result = []
         for mu in self.mus:
             t_mu = torch.transpose(mu, 0, 1)
@@ -68,13 +68,13 @@ class ConvNet(nn.Module):
             result.append(torch.div(mu_max-mu_mmax, mu_max+mu_mmax).numpy())
         return result
 
-    def clamp_forward(self, x, layer_idx, neuron_idx):  # clamp jth neuron on ith layer
+    def clamp_forward(self, x, layer_idx, neuron_idx, device):  # clamp jth neuron on ith layer
         for i, layer in enumerate(self.conv_layers):
             x = layer(x)
             x = self.activ(x)
             if i == layer_idx:
                 for single in x:
-                    single[neuron_idx] = torch.zeros((self.feature_sizes[layer_idx], self.feature_sizes[layer_idx]))
+                    single[neuron_idx] = torch.zeros((self.feature_sizes[layer_idx], self.feature_sizes[layer_idx])).to(device)
         x = torch.flatten(x, start_dim=1)
         x = self.fc(x)
 
