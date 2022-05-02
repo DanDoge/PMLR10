@@ -65,7 +65,7 @@ class ConvNet(nn.Module):
             mu_mmax = (mu_sum - mu_max) / (self.num_classes - 1)
             mu_max /= num_images
             mu_mmax /= num_images
-            result.append(torch.div(mu_max-mu_mmax, mu_max+mu_mmax).numpy())
+            result.append(torch.div(mu_max-mu_mmax, mu_max+mu_mmax).cpu().numpy())
         return result
 
     def clamp_forward(self, x, layer_idx, neuron_idx, device):  # clamp jth neuron on ith layer
