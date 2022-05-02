@@ -32,7 +32,7 @@ class ConvNet(nn.Module):
         print(self.conv_layers)
         print("--------------------------")
 
-    def init_mus(self):
+    def init_mus(self, device):
         self.mus = [torch.zeros((self.num_classes, self.layer_sizes[0]))]  # num_classes * layer_size
         for i in range(1, len(self.layer_sizes)):
             self.mus.append((torch.zeros((self.num_classes, self.layer_sizes[i]))))
@@ -51,7 +51,7 @@ class ConvNet(nn.Module):
 
     def compute_selectivity(self, testloader, device):
         num_images = 0
-        self.init_mus()
+        self.init_mus(device)
         with torch.no_grad():
             for data in testloader:
                 images, labels = data[0].to(device), data[1].to(device)

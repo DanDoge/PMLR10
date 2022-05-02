@@ -11,6 +11,7 @@ transform = transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
 ])
+import matplotlib.pyplot as plt
 
 traindataset = torchvision.datasets.CIFAR10("./data", train=True, download=True, transform=transform)
 trainloader = torch.utils.data.DataLoader(traindataset, batch_size=32,
@@ -87,3 +88,4 @@ for i, sel in enumerate(selectivity):
 np.save("./log/sel.npy", selectivity)
 np.save("./log/impact.npy", importance)
 # TODO :draw figure of importance to selectivity
+
