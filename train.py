@@ -22,11 +22,12 @@ testloader = torch.utils.data.DataLoader(testset, batch_size=32,
                                          shuffle=False, num_workers=0)
 
 net = ConvNet()
-optimizer = torch.optim.Adam(net.parameters(), lr=1e-3)
+optimizer = torch.optim.Adam(net.parameters(), lr=1e-4)
 criterion = nn.CrossEntropyLoss()
 
 epoch = 100 # in the paper
 for i in range(epoch):
+    net.train()
     for batch in trainloader:
         inputs, labels = batch
 
@@ -35,8 +36,6 @@ for i in range(epoch):
         loss = criterion(outputs, labels)
         loss.backward()
         optimizer.step()
-
-        print(loss.item())
 
 
     correct = 0

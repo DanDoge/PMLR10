@@ -22,7 +22,26 @@ class ConvNet(nn.Module):
             )
 
         self.conv_layers = nn.Sequential(*self.conv_layers)
-        self.fc = torch.nn.Linear(512*4*4, 10)
+        self.fc = nn.Sequential(
+            nn.Linear(512 * 4 * 4, 1024),
+            nn.ReLU(True),
+            nn.Linear(1024, 1024),
+            nn.ReLU(True),
+            nn.Linear(1024, 10),
+        )
+
+
+        for m in self.modules():
+            if isinstance(m, nn.Conv2d):
+                nn.init.kaiming_normal_(m.weight, mode="fan_out", nonlinearity="relu")
+                if m.bias is not None:
+                    nn.init.constant_(m.bias, 0)
+            elif isinstance(m, nn.BatchNorm2d):
+                nn.init.constant_(m.weight, 1)
+                nn.init.constant_(m.bias, 0)
+            elif isinstance(m, nn.Linear):
+                nn.init.normal_(m.weight, 0, 0.01)
+                nn.init.constant_(m.bias, 0)
 
         print("---network architecture---")
         print(self.conv_layers)
