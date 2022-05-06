@@ -1,0 +1,37 @@
+Sender: LSF System <lsfadmin@eu-g3-036>
+Subject: Job 216716688: <python train.py> in cluster <euler> Exited
+
+Job <python train.py> was submitted from host <eu-login-16> by user <jiahzhang> in cluster <euler> at Sun May  1 10:23:18 2022
+Job was executed on host(s) <eu-g3-036>, in queue <gpu.4h>, as user <jiahzhang> in cluster <euler> at Sun May  1 10:23:52 2022
+</cluster/home/jiahzhang> was used as the home directory.
+</cluster/home/jiahzhang/PMLR10> was used as the working directory.
+Started at Sun May  1 10:23:52 2022
+Terminated at Sun May  1 10:24:09 2022
+Results reported at Sun May  1 10:24:09 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python train.py
+------------------------------------------------------------
+
+TERM_MEMLIMIT: job killed after reaching LSF memory usage limit.
+Exited with exit code 137.
+
+Resource usage summary:
+
+    CPU time :                                   6.56 sec.
+    Max Memory :                                 1024 MB
+    Average Memory :                             742.33 MB
+    Total Requested Memory :                     1024.00 MB
+    Delta Memory :                               0.00 MB
+    Max Swap :                                   -
+    Max Processes :                              3
+    Max Threads :                                4
+    Run time :                                   25 sec.
+    Turnaround time :                            51 sec.
+
+The output (if any) follows:
+
+/cluster/shadow/.lsbatch/1651393398.216716688: line 8: 45006 Killed                  python train.py

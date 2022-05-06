@@ -14,18 +14,22 @@ class ConvNet(nn.Module):
         # here we have to assume for all layers, padding = 1, otherwise not trainable
         self.conv_layers = [
             torch.nn.Conv2d(in_channel, layer_sizes[0], kernel_size=3, stride=strides[0], # specified in the appendix
-            padding=1, dilation=1, groups=1, bias=True, padding_mode='zeros', device=None, dtype=None), # not specififed params here
+            padding=1, dilation=1, groups=1, bias=True), # not specififed params here
+            torch.nn.BatchNorm2d(layer_sizes[0]),
         ]
         for i in range(1, len(layer_sizes)):
             self.conv_layers.append(
                 torch.nn.Conv2d(layer_sizes[i-1], layer_sizes[i], kernel_size=3, stride=strides[i], padding = 1)
             )
+            self.conv_layers.append(
+                torch.nn.BatchNorm2d(layer_sizes[i]),
+            )
 
         self.conv_layers = nn.Sequential(*self.conv_layers)
         self.fc = nn.Sequential(
-            nn.Linear(512 * 4 * 4, 1024),
+            nn.Linear(512 * 4 * 4, 2048),
             nn.ReLU(True),
-            nn.Linear(1024, 1024),
+            nn.Linear(2048, 1024),
             nn.ReLU(True),
             nn.Linear(1024, 10),
         )
@@ -49,9 +53,10 @@ class ConvNet(nn.Module):
         
 
     def forward(self, x):
-        for layer in self.conv_layers:
+        for i, layer in enumerate(self.conv_layers):
             x = layer(x)
-            x = self.activ(x)
+            if i % 2: # after BN
+                x = self.activ(x)
 
         x = torch.flatten(x, start_dim=1)
         x = self.fc(x)
